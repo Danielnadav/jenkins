@@ -30,9 +30,11 @@ spec:
           script {
             // def image = docker.build('jenkins/jnlp-slave')
             // image.inside() {
-              sh "docker ps -a"
+              sh "whoami"
             }
           }
         
       }
     }
+  }
+}
