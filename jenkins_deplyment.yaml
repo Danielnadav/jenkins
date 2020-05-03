@@ -1,0 +1,489 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2020-04-25T23:09:19Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: jenkins-master
+    app.kubernetes.io/instance: happy-moth
+    app.kubernetes.io/managed-by: Tiller
+    app.kubernetes.io/name: jenkins
+    helm.sh/chart: jenkins-1.17.2
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:helm.sh/chart: {}
+      f:spec:
+        f:progressDeadlineSeconds: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector:
+          f:matchLabels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+        f:strategy:
+          f:type: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:checksum/config: {}
+            f:labels:
+              .: {}
+              f:app.kubernetes.io/component: {}
+              f:app.kubernetes.io/instance: {}
+              f:app.kubernetes.io/managed-by: {}
+              f:app.kubernetes.io/name: {}
+              f:helm.sh/chart: {}
+          f:spec:
+            f:containers:
+              k:{"name":"jenkins"}:
+                .: {}
+                f:args: {}
+                f:env:
+                  .: {}
+                  k:{"name":"ADMIN_PASSWORD"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"ADMIN_USER"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"JAVA_OPTS"}:
+                    .: {}
+                    f:name: {}
+                  k:{"name":"JENKINS_OPTS"}:
+                    .: {}
+                    f:name: {}
+                  k:{"name":"JENKINS_SLAVE_AGENT_PORT"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"POD_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef:
+                        .: {}
+                        f:apiVersion: {}
+                        f:fieldPath: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:livenessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:initialDelaySeconds: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":8080,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                  k:{"containerPort":50000,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:readinessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:initialDelaySeconds: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:resources:
+                  .: {}
+                  f:limits:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/tmp"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/usr/share/jenkins/ref/plugins/"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/usr/share/jenkins/ref/secrets/"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/var/jenkins_config"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/var/jenkins_home"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:dnsPolicy: {}
+            f:initContainers:
+              .: {}
+              k:{"name":"copy-default-config"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"ADMIN_PASSWORD"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"ADMIN_USER"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources:
+                  .: {}
+                  f:limits:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/tmp"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/usr/share/jenkins/ref/secrets/"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/var/jenkins_config"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/var/jenkins_home"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/var/jenkins_plugins"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext:
+              .: {}
+              f:runAsUser: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:volumes:
+              .: {}
+              k:{"name":"jenkins-config"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:name: {}
+                f:name: {}
+              k:{"name":"jenkins-home"}:
+                .: {}
+                f:name: {}
+                f:persistentVolumeClaim:
+                  .: {}
+                  f:claimName: {}
+              k:{"name":"plugin-dir"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+              k:{"name":"plugins"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+              k:{"name":"secrets-dir"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+              k:{"name":"tmp"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2020-04-25T23:09:19Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-04-26T01:37:40Z"
+  name: happy-moth-jenkins
+  namespace: default
+  resourceVersion: "92351"
+  selfLink: /apis/apps/v1/namespaces/default/deployments/happy-moth-jenkins
+  uid: 9693d43c-18d4-4ced-888d-8d2f10a22a47
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: jenkins-master
+      app.kubernetes.io/instance: happy-moth
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        checksum/config: aa83decef3af5e8e8f505afcd66ea18dd22288606ac07007192c013e806ec71e
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/component: jenkins-master
+        app.kubernetes.io/instance: happy-moth
+        app.kubernetes.io/managed-by: Tiller
+        app.kubernetes.io/name: jenkins
+        helm.sh/chart: jenkins-1.17.2
+    spec:
+      containers:
+      - args:
+        - --argumentsRealm.passwd.$(ADMIN_USER)=$(ADMIN_PASSWORD)
+        - --argumentsRealm.roles.$(ADMIN_USER)=admin
+        - --httpPort=8080
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: JAVA_OPTS
+        - name: JENKINS_OPTS
+        - name: JENKINS_SLAVE_AGENT_PORT
+          value: "50000"
+        - name: ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: jenkins-admin-password
+              name: happy-moth-jenkins
+        - name: ADMIN_USER
+          valueFrom:
+            secretKeyRef:
+              key: jenkins-admin-user
+              name: happy-moth-jenkins
+        image: jenkins/jenkins:lts
+        imagePullPolicy: Always
+        livenessProbe:
+          failureThreshold: 5
+          httpGet:
+            path: /login
+            port: http
+            scheme: HTTP
+          initialDelaySeconds: 90
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        name: jenkins
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        - containerPort: 50000
+          name: slavelistener
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /login
+            port: http
+            scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        resources:
+          limits:
+            cpu: "2"
+            memory: 4Gi
+          requests:
+            cpu: 50m
+            memory: 256Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /tmp
+          name: tmp
+        - mountPath: /var/jenkins_home
+          name: jenkins-home
+        - mountPath: /var/jenkins_config
+          name: jenkins-config
+          readOnly: true
+        - mountPath: /usr/share/jenkins/ref/secrets/
+          name: secrets-dir
+        - mountPath: /usr/share/jenkins/ref/plugins/
+          name: plugin-dir
+      dnsPolicy: ClusterFirst
+      initContainers:
+      - command:
+        - sh
+        - /var/jenkins_config/apply_config.sh
+        env:
+        - name: ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: jenkins-admin-password
+              name: happy-moth-jenkins
+        - name: ADMIN_USER
+          valueFrom:
+            secretKeyRef:
+              key: jenkins-admin-user
+              name: happy-moth-jenkins
+        image: jenkins/jenkins:lts
+        imagePullPolicy: Always
+        name: copy-default-config
+        resources:
+          limits:
+            cpu: "2"
+            memory: 4Gi
+          requests:
+            cpu: 50m
+            memory: 256Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /tmp
+          name: tmp
+        - mountPath: /var/jenkins_home
+          name: jenkins-home
+        - mountPath: /var/jenkins_config
+          name: jenkins-config
+        - mountPath: /usr/share/jenkins/ref/secrets/
+          name: secrets-dir
+        - mountPath: /var/jenkins_plugins
+          name: plugin-dir
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        runAsUser: 0
+      serviceAccount: happy-moth-jenkins
+      serviceAccountName: happy-moth-jenkins
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - emptyDir: {}
+        name: plugins
+      - emptyDir: {}
+        name: tmp
+      - configMap:
+          defaultMode: 420
+          name: happy-moth-jenkins
+        name: jenkins-config
+      - emptyDir: {}
+        name: secrets-dir
+      - emptyDir: {}
+        name: plugin-dir
+      - name: jenkins-home
+        persistentVolumeClaim:
+          claimName: happy-moth-jenkins
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2020-04-25T23:09:19Z"
+    lastUpdateTime: "2020-04-25T23:13:40Z"
+    message: ReplicaSet "happy-moth-jenkins-949f96cb9" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2020-04-26T01:37:40Z"
+    lastUpdateTime: "2020-04-26T01:37:40Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

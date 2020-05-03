@@ -1,0 +1,28 @@
+[?1049h[>4;2m[?1h=[?2004h[1;16r[?12h[?12l[22;2t[22;1t[27m[29m[m[H[2J[?25l[16;1H"/var/folders/9h/0r1f00492lqg7mgn_bdngxqc0000gn/T/kubectl-edit-e41b1.yaml" 63L, 1766C[1;1H# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-04-25T23:09:19Z"
+  labels:
+    app.kubernetes.io/component: jenkins-master
+    app.kubernetes.io/instance: happy-moth
+    app.kubernetes.io/managed-by: Tiller
+    app.kubernetes.io/name: jenkins
+    helm.sh/chart: jenkins-1.17.2
+  managedFields:[1;1H[?25h
+[?25l[16;1HType  :qa  and press <Enter> to exit Vim[16;41H[K[2;1H[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h
+
+
+
+
+
+  [?25l[?25h[?25l[1;15r[1;1H[7M[1;16r[9;3H- apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:[12;7Hf:metadata:[13;9Hf:labels:[14;11H.: {}[15;11Hf:app.kubernetes.io/component: {}[16;1H[K[8;3H[?25h
+  
+    [?25l[16;1HType  :qa  and press <Enter> to exit Vim[10;5H[?25h[16;1H[?2004l[?1l>[>4;m[?1049lVim: Caught deadly signal HUP
+[?25hVim: Finished.
+[16;1H[23;2t[23;1t
